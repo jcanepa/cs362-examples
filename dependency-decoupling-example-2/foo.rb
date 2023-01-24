@@ -15,7 +15,7 @@ end
 
 f = Foo.new
 
-# override the base class and override the expensive production methods
+# override the base class to override production methods
 class TestFoo < Foo
   def run
     @obj = SomeTestClass.new
