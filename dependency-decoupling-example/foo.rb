@@ -1,8 +1,4 @@
-class SomeClass
-  def do_the_thing
-    puts "does something complicated"
-  end
-end
+require_relative "some-class"
 
 class Foo
   attr_accessor :obj
