@@ -12,5 +12,5 @@ end
 s = Static.new
 puts s.from_an_instance
 
-# evoke a class method (no instantiation)
+# evoke a class method (no instantiation needed)
 puts Static.from_a_class
