@@ -3,8 +3,8 @@ require_relative "some-class"
 class Foo
   attr_accessor :obj
 
-  def initialize
-    @obj = SomeClass.new
+  def initialize(new_obj)
+    @obj = new_obj
   end
 
   def run
@@ -12,5 +12,10 @@ class Foo
   end
 end
 
-f = Foo.new
+production_class = SomeClass.new
+f = Foo.new(production_class)
+f.run
+
+test_class = SomeTestClass.new
+f = Foo.new(test_class)
 f.run
