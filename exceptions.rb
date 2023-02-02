@@ -28,3 +28,14 @@ rescue ZeroDivisionError => e
 rescue
   puts "I don't know what kind of error you encountered"
 end
+
+# other constructs
+begin
+  puts 1/0
+rescue
+  puts "whoops"
+else
+  puts "no exception occured"
+ensure
+  puts "this runs always"
+end
