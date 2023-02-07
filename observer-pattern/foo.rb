@@ -11,7 +11,7 @@ class Score
       broadcast()
       @score_under_100 = false
     end
-    puts @score
+    puts "Score: #{@score}"
   end
 
   def register(method)
@@ -55,4 +55,6 @@ end
 o1 = Observer.new(s)
 o2 = Observer.new(s)
 
-s.add_score(100)
+s.add_score(20)
+s.add_score(10)
+s.add_score(300)
