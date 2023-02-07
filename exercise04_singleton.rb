@@ -11,9 +11,8 @@ class Sky
   end
 
   def self.instance
-    if @@singleton == nil
-      @@singleton = new
-    end
+    @@singleton = new unless @@singleton
+
     return @@singleton
   end
 
