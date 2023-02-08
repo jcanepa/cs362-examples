@@ -32,9 +32,7 @@ end
 class Observer
   def initialize(score)
     score.register(self)
-
-    print(self)
-    puts " registered"
+    puts "#{self} registered"
   end
 
   def callback
