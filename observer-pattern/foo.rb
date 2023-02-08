@@ -1,7 +1,7 @@
 class Score
   def initialize
     @score = 0
-    @callbacks = []
+    @listeners = []
     @score_under_100 = true
   end
 
@@ -15,15 +15,15 @@ class Score
   end
 
   def register(method)
-    @callbacks.push(method)
+    @listeners.push(method)
   end
 
   def unregister(method)
-    @callbacks.delete(method)
+    @listeners.delete(method)
   end
 
   def broadcast()
-    for o in @callbacks do
+    for o in @listeners do
       o.callback()
     end
   end
