@@ -14,12 +14,12 @@ class Score
     puts "Score: #{@score}"
   end
 
-  def register(method)
-    @listeners.push(method)
+  def register(listener)
+    @listeners.push(listener)
   end
 
-  def unregister(method)
-    @listeners.delete(method)
+  def unregister(listener)
+    @listeners.delete(listener)
   end
 
   def broadcast()
