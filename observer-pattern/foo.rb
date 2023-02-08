@@ -29,14 +29,6 @@ class Score
   end
 end
 
-# objects want to know when the score reaches 100 or more
-# - Register their interest in the event
-# - Get some kind of callback on the event
-# - Unregister their interest
-
-s = Score.new
-
-# some object:
 class Observer
   def initialize(score)
     score.register(self)
@@ -52,6 +44,13 @@ class Observer
     puts "I was called once the score reached 100!"
   end
 end
+
+# objects want to know when the score reaches 100 or more
+# - Register their interest in the event
+# - Get some kind of callback on the event
+# - Unregister their interest
+
+s = Score.new
 
 o1 = Observer.new(s)
 o2 = Observer.new(s)
