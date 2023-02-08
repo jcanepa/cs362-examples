@@ -7,11 +7,12 @@ class Score
 
   def add_score(x)
     @score = @score + x
+    puts "Score: #{@score}"
+
     if (@score >= 100 and @score_under_100)
       broadcast()
       @score_under_100 = false
     end
-    puts "Score: #{@score}"
   end
 
   def register(listener)
