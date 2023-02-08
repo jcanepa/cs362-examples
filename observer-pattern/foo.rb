@@ -40,11 +40,12 @@ s = Score.new
 class Observer
   def initialize(score)
     score.register(self)
+    foo_method()
   end
 
   def foo_method
     print(self)
-    puts "registered"
+    puts " registered"
   end
 
   def callback
