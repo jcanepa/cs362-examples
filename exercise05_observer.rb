@@ -1,4 +1,4 @@
-# TODO: Your Name
+# Julian Canepa
 # Exercise 5: Observer Pattern
 
 class WeatherStation
@@ -23,11 +23,14 @@ class WeatherStation
 
 end
 
-# TODO: Define a StationObserver class
-#       A StationObserver should have one
-#       method named notify.
+class StationObserver
+  def notify(weather_station)
+    puts weather_station.temperature
+  end
+end
 
 weather_station = WeatherStation.new
-# TODO: Add a new observer to the weather station
+
+weather_station.add_observer(StationObserver.new)
 
 weather_station.temperature = 72
